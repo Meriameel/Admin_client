@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="476.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton layoutX="57.0" layoutY="114.0" prefHeight="58.0" prefWidth="145.0" style="-fx-background-color: #3b84c8;" text="Gestion Agent" textFill="#e1dada" onAction="#ChooseAgent">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="258.0" layoutY="114.0" prefHeight="58.0" prefWidth="135.0" style="-fx-background-color: #3b84c8;" text="Gestion Agence" textFill="#f3f2f2" onAction="#ChooseAgence">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
