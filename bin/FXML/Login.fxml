@@ -9,17 +9,17 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="465.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXTextField layoutX="128.0" layoutY="96.0" prefHeight="25.0" prefWidth="233.0" promptText="Username">
+      <JFXTextField id="username" fx:id="username" focusColor="#d4d7e1" layoutX="128.0" layoutY="96.0" prefHeight="25.0" prefWidth="233.0" promptText="Username">
          <font>
             <Font size="14.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField layoutX="129.0" layoutY="172.0" prefHeight="25.0" prefWidth="233.0" promptText="Password">
+      <JFXPasswordField fx:id="password" layoutX="129.0" layoutY="172.0" prefHeight="25.0" prefWidth="233.0" promptText="Password">
          <font>
             <Font size="14.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton layoutX="165.0" layoutY="237.0" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #3b84c8;" text="Login" textFill="#ebebeb" textOverrun="LEADING_ELLIPSIS" onAction="#login">
+      <JFXButton layoutX="165.0" layoutY="237.0" onAction="#login" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #3b84c8;" text="Login" textFill="#ebebeb" textOverrun="LEADING_ELLIPSIS">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

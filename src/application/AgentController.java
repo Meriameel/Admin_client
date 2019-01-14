@@ -5,6 +5,8 @@ import java.time.LocalDate;
 
 import javax.xml.datatype.XMLGregorianCalendar;
 
+import com.meriame.soapservice.Admin;
+import com.meriame.soapservice.AdminLogin;
 import com.meriame.soapservice.AgentSOAPDTO;
 
 import Tools.Service;
@@ -13,6 +15,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.MenuItem;
@@ -47,12 +51,7 @@ public class AgentController {
    
    @FXML 
    private DatePicker dob;
-   
-   @FXML 
-   private TextField admin; 
-   
-   @FXML 
-   private TextField agence; 
+    
    
    @FXML 
    private TextField username; 
@@ -114,7 +113,29 @@ public void saveAgent(ActionEvent event ) {
 	try {
 		
 		Service s = new Service();
-		if(s.getAdmindb().addAgent(arg0, arg1) !=0) {}
+		AgentSOAPDTO agent = new AgentSOAPDTO();
+		 String adminusername = new AdminLogin().getArg0();
+		agent.setCin(Cin.getText());
+		agent.setNom(Nom.getText());
+		agent.setPrenom(Prenom.getText());
+		agent.setAdresse(Adresse.getText());
+		agent.setTelephone(Telephone.getText());
+		//agent.setDatedenaissance(dob.getEditor().getText());
+		agent.setEmail(Email.getText());
+		agent.setUsername(username.getText());
+		agent.setPassword(password.getText());
+		if(s.getAdmindb().addAgent(agent, adminusername) !=null) {
+			
+			Alert a= new Alert(AlertType.CONFIRMATION);
+			a.setTitle("Confirmation");
+			a.setContentText("Données ajoutés avec succées");
+			a.showAndWait();
+		}else  {
+			Alert a= new Alert(AlertType.ERROR);
+			a.setTitle("Erreur");
+			a.setContentText("Données non ajoutés");
+			a.showAndWait();
+		}
 	
 	} catch(Exception e) {
 		e.printStackTrace();

@@ -20,7 +20,7 @@ public class Service {
 	}
 	
 	public Admin getAdmindb() {
-		
+		init();
 		return admin; 
 	}
 }

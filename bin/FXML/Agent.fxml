@@ -67,14 +67,7 @@
                   <Insets left="25.0" />
                </VBox.margin>
             </DatePicker>
-             <TextField fx:id="admin" prefHeight="30.0" prefWidth="246.0" promptText="Admin">
-               <VBox.margin>
-                  <Insets left="25.0" right="25.0" />
-               </VBox.margin></TextField>
-                <TextField fx:id="agence" prefHeight="30.0" prefWidth="246.0" promptText="Agence">
-               <VBox.margin>
-                  <Insets left="25.0" right="25.0" />
-               </VBox.margin></TextField>
+            
            
             <TextField fx:id="username" prefHeight="30.0" prefWidth="246.0" promptText="Username">
                <VBox.margin>
@@ -88,7 +81,7 @@
             <HBox prefHeight="30.0" prefWidth="250.0" spacing="10.0">
                <children>
                   
-                  <Button fx:id="saveAgent" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SaveAgent" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #3b84c8;" styleClass="btnGreen" text="Save" textFill="WHITE">
+                  <Button fx:id="saveAgent" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveAgent" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: #3b84c8;" styleClass="btnGreen" text="Save" textFill="WHITE" >
                      <font>
                         <Font size="15.0" />
                      </font>
