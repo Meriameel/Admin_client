@@ -29,10 +29,10 @@ public class LoginController {
 	 private Stage primaryStage; 
 	 
 	 @FXML 
-	   private JFXTextField username; 
+	   private TextField username; 
 	   
 	@FXML 
-	private JFXPasswordField password;
+	private PasswordField password;
 	    
 public LoginController(Stage primaryStage) {
 		super();
@@ -48,7 +48,7 @@ public void login(ActionEvent event ) {
 		Service s = new Service();
 
 		
-		if(s.getAdmindb().adminLogin(username.getText(), password.getText())==true) {
+		if(s.getAdmindb().adminLogin(username.getText(), password.getText())==true) { 
         System.out.println("sys works");
 		BorderPane root = new BorderPane();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/ChooseMain.fxml"));
@@ -58,7 +58,7 @@ public void login(ActionEvent event ) {
 		Scene scene = new Scene(parent);
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		}
+		} 
 		else {
 			Alert a= new Alert(AlertType.ERROR);
 			a.setTitle("Erreur");

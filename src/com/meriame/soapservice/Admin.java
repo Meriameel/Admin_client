@@ -74,6 +74,17 @@ public interface Admin {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<com.meriame.soapservice.Agent>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findAllAgent", targetNamespace = "http://soapService.meriame.com/", className = "com.meriame.soapservice.FindAllAgent")
+    @ResponseWrapper(localName = "findAllAgentResponse", targetNamespace = "http://soapService.meriame.com/", className = "com.meriame.soapservice.FindAllAgentResponse")
+    public List<Agent> findAllAgent();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns boolean
@@ -85,6 +96,17 @@ public interface Admin {
     public boolean deleteAgent(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.meriame.soapservice.Agence>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findAllAgences", targetNamespace = "http://soapService.meriame.com/", className = "com.meriame.soapservice.FindAllAgences")
+    @ResponseWrapper(localName = "findAllAgencesResponse", targetNamespace = "http://soapService.meriame.com/", className = "com.meriame.soapservice.FindAllAgencesResponse")
+    public List<Agence> findAllAgences();
 
     /**
      * 

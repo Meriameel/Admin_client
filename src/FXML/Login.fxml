@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="465.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <JFXTextField id="username" fx:id="username" focusColor="#d4d7e1" layoutX="128.0" layoutY="96.0" prefHeight="25.0" prefWidth="233.0" promptText="Username">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </JFXTextField>
-      <JFXPasswordField fx:id="password" layoutX="129.0" layoutY="172.0" prefHeight="25.0" prefWidth="233.0" promptText="Password">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </JFXPasswordField>
-      <JFXButton layoutX="165.0" layoutY="237.0" onAction="#login" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #3b84c8;" text="Login" textFill="#ebebeb" textOverrun="LEADING_ELLIPSIS">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </JFXButton>
+      
       <Label layoutX="175.0" layoutY="30.0" text="Admin Login" textFill="#3b84c8">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <TextField fx:id="username" layoutX="101.0" layoutY="81.0" prefHeight="35.0" prefWidth="256.0" promptText="Username"/>
+      <PasswordField fx:id="password" layoutX="101.0" layoutY="150.0" prefHeight="35.0" prefWidth="256.0" promptText="Password" />
+      <JFXButton layoutX="165.0" layoutY="237.0" onAction="#login" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #3b84c8;" text="Login" textFill="#ebebeb" textOverrun="LEADING_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

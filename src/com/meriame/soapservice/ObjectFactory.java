@@ -24,8 +24,11 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _FindAllAgencesResponse_QNAME = new QName("http://soapService.meriame.com/", "findAllAgencesResponse");
+    private final static QName _FindAllAgentResponse_QNAME = new QName("http://soapService.meriame.com/", "findAllAgentResponse");
     private final static QName _EditAgence_QNAME = new QName("http://soapService.meriame.com/", "editAgence");
     private final static QName _EditAgenceResponse_QNAME = new QName("http://soapService.meriame.com/", "editAgenceResponse");
+    private final static QName _FindAllAgences_QNAME = new QName("http://soapService.meriame.com/", "findAllAgences");
     private final static QName _GetAgence_QNAME = new QName("http://soapService.meriame.com/", "getAgence");
     private final static QName _AdminLogin_QNAME = new QName("http://soapService.meriame.com/", "AdminLogin");
     private final static QName _AddAgentResponse_QNAME = new QName("http://soapService.meriame.com/", "addAgentResponse");
@@ -37,6 +40,7 @@ public class ObjectFactory {
     private final static QName _DeleteAgence_QNAME = new QName("http://soapService.meriame.com/", "deleteAgence");
     private final static QName _DeleteAgentResponse_QNAME = new QName("http://soapService.meriame.com/", "deleteAgentResponse");
     private final static QName _EditAgent_QNAME = new QName("http://soapService.meriame.com/", "editAgent");
+    private final static QName _FindAllAgent_QNAME = new QName("http://soapService.meriame.com/", "findAllAgent");
     private final static QName _AdminLoginResponse_QNAME = new QName("http://soapService.meriame.com/", "AdminLoginResponse");
     private final static QName _DeleteAgent_QNAME = new QName("http://soapService.meriame.com/", "deleteAgent");
     private final static QName _AddAgent_QNAME = new QName("http://soapService.meriame.com/", "addAgent");
@@ -66,6 +70,14 @@ public class ObjectFactory {
      */
     public EditAgent createEditAgent() {
         return new EditAgent();
+    }
+
+    /**
+     * Create an instance of {@link FindAllAgent }
+     * 
+     */
+    public FindAllAgent createFindAllAgent() {
+        return new FindAllAgent();
     }
 
     /**
@@ -165,6 +177,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FindAllAgentResponse }
+     * 
+     */
+    public FindAllAgentResponse createFindAllAgentResponse() {
+        return new FindAllAgentResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindAllAgencesResponse }
+     * 
+     */
+    public FindAllAgencesResponse createFindAllAgencesResponse() {
+        return new FindAllAgencesResponse();
+    }
+
+    /**
      * Create an instance of {@link DeleteAgenceResponse }
      * 
      */
@@ -205,11 +233,93 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FindAllAgences }
+     * 
+     */
+    public FindAllAgences createFindAllAgences() {
+        return new FindAllAgences();
+    }
+
+    /**
      * Create an instance of {@link GetAgence }
      * 
      */
     public GetAgence createGetAgence() {
         return new GetAgence();
+    }
+
+    /**
+     * Create an instance of {@link Agent }
+     * 
+     */
+    public Agent createAgent() {
+        return new Agent();
+    }
+
+    /**
+     * Create an instance of {@link Admin_Type }
+     * 
+     */
+    public Admin_Type createAdmin_Type() {
+        return new Admin_Type();
+    }
+
+    /**
+     * Create an instance of {@link Agence }
+     * 
+     */
+    public Agence createAgence() {
+        return new Agence();
+    }
+
+    /**
+     * Create an instance of {@link Client }
+     * 
+     */
+    public Client createClient() {
+        return new Client();
+    }
+
+    /**
+     * Create an instance of {@link Versement }
+     * 
+     */
+    public Versement createVersement() {
+        return new Versement();
+    }
+
+    /**
+     * Create an instance of {@link User }
+     * 
+     */
+    public User createUser() {
+        return new User();
+    }
+
+    /**
+     * Create an instance of {@link Compte }
+     * 
+     */
+    public Compte createCompte() {
+        return new Compte();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllAgencesResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soapService.meriame.com/", name = "findAllAgencesResponse")
+    public JAXBElement<FindAllAgencesResponse> createFindAllAgencesResponse(FindAllAgencesResponse value) {
+        return new JAXBElement<FindAllAgencesResponse>(_FindAllAgencesResponse_QNAME, FindAllAgencesResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllAgentResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soapService.meriame.com/", name = "findAllAgentResponse")
+    public JAXBElement<FindAllAgentResponse> createFindAllAgentResponse(FindAllAgentResponse value) {
+        return new JAXBElement<FindAllAgentResponse>(_FindAllAgentResponse_QNAME, FindAllAgentResponse.class, null, value);
     }
 
     /**
@@ -228,6 +338,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soapService.meriame.com/", name = "editAgenceResponse")
     public JAXBElement<EditAgenceResponse> createEditAgenceResponse(EditAgenceResponse value) {
         return new JAXBElement<EditAgenceResponse>(_EditAgenceResponse_QNAME, EditAgenceResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllAgences }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soapService.meriame.com/", name = "findAllAgences")
+    public JAXBElement<FindAllAgences> createFindAllAgences(FindAllAgences value) {
+        return new JAXBElement<FindAllAgences>(_FindAllAgences_QNAME, FindAllAgences.class, null, value);
     }
 
     /**
@@ -327,6 +446,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soapService.meriame.com/", name = "editAgent")
     public JAXBElement<EditAgent> createEditAgent(EditAgent value) {
         return new JAXBElement<EditAgent>(_EditAgent_QNAME, EditAgent.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindAllAgent }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soapService.meriame.com/", name = "findAllAgent")
+    public JAXBElement<FindAllAgent> createFindAllAgent(FindAllAgent value) {
+        return new JAXBElement<FindAllAgent>(_FindAllAgent_QNAME, FindAllAgent.class, null, value);
     }
 
     /**

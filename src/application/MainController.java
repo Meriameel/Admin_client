@@ -46,9 +46,9 @@ public class MainController {
 			loader.setController(new AgenceController(primaryStage));
 			Parent parent = loader.load();
 			
-			GetAgence getAgence = new GetAgence();
+			/*GetAgence getAgence = new GetAgence();
 			
-			JAXBElement<GetAgence> jax = new ObjectFactory().createGetAgence(getAgence);
+			JAXBElement<GetAgence> jax = new ObjectFactory().createGetAgence(getAgence);*/
 			
 			
 			Scene scene = new Scene(parent);
